@@ -29,9 +29,9 @@ app.get("/paypal", (req, res) => {
   paypal.configure({
     mode: "sandbox", //sandbox or live
     client_id:
-      "AfjHfj3IoQU96rH_hkSXj-sNuOTqKlADktMgMBD4dNWagka-KHMiyHsLzJEuBv1S6jo97a9AzvLv4SFp",
+      "AcR3Zgpr05c_8lW_y8uLVWrLBseMlj1N8WMq7Lto8CeFf8v7PLoC1rDTWIKdtrLIZ5p_3DbfVa1IIfBJ",
     client_secret:
-      "EEAL7a98xl78HYFv7Pz67OxgiGstyi8Nm4akOjc_QMRtG81HxHrHw5KhulhWlws3MwcCVObJmlbrGRFE",
+      "EPE-0wmybxzK_OP8PmlHJxF3vIYFIjoj3WFSc3Pv_OGvwys6whD_AMj1whPFuI3K2EwLSk0xhnmmOGjW",
   });
   var create_payment_json = {
     intent: "sale",
