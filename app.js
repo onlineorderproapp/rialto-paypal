@@ -13,26 +13,19 @@ app.set("view engine", "ejs");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// paypal.configure({
-//   mode: "sandbox", //sandbox or live
-//   client_id:
-//     "AeOHYPq7ZafdnPj1LxGlr5sIAhLjCFi87CaQdDhm-J3larmppeXwRSiJGzlIV7acLYH2CWfsEA36agwZ",
-//   client_secret:
-//     "EAbIXLzUKagdMy92tSfCepQnijiSCwu9mdFgGzapYZ0x2hBLGPnVQ7pzJ0Kxiu_LuuhDH0_gd_JK5Py-",
-// });
+paypal.configure({
+  mode: "sandbox", //sandbox or live
+  client_id:
+    "AYhN6IW1DJJX35QFCpsKI1PS0KGbuRLjtZAkT0ACVYuswxxElMAl0U0GS_gND7keZadaaK5uZnzU8p75",
+  client_secret:
+    "EM4g4VcttkEB8NYrF5-kgDtvAWgGZtoHGDXnvt7k5L_Rp7dpd9FbrARtCtdG-oVxI2nbf6V1udU9_OcJ",
+});
 
 app.get("/", (req, res) => {
   res.render("index");
 });
 
 app.get("/paypal", (req, res) => {
-  paypal.configure({
-    mode: "sandbox", //sandbox or live
-    client_id:
-      "AcR3Zgpr05c_8lW_y8uLVWrLBseMlj1N8WMq7Lto8CeFf8v7PLoC1rDTWIKdtrLIZ5p_3DbfVa1IIfBJ",
-    client_secret:
-      "EPE-0wmybxzK_OP8PmlHJxF3vIYFIjoj3WFSc3Pv_OGvwys6whD_AMj1whPFuI3K2EwLSk0xhnmmOGjW",
-  });
   var create_payment_json = {
     intent: "sale",
     payer: {
