@@ -32,8 +32,8 @@ app.get("/paypal", (req, res) => {
       payment_method: "paypal",
     },
     redirect_urls: {
-      return_url: `https://paypal-node-server.herokuapp.com/success?amount=${req.query.amount}`,
-      cancel_url: "https://paypal-node-server.herokuapp.com/cancel",
+      return_url: `https://rialto-paypal.herokuapp.com/success?amount=${req.query.amount}`,
+      cancel_url: "https://rialto-paypal.herokuapp.com/cancel",
     },
     transactions: [
       {
