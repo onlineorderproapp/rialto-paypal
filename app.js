@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 paypal.configure({
-  mode: "live", //sandbox or live
+  mode: "sandbox", //sandbox or live
   client_id:
     "AYhN6IW1DJJX35QFCpsKI1PS0KGbuRLjtZAkT0ACVYuswxxElMAl0U0GS_gND7keZadaaK5uZnzU8p75",
   client_secret:
